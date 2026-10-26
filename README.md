@@ -1,8 +1,10 @@
 # 8-Puzzle Solver
 
-This project implements classic search algorithms for solving the 8-puzzle and includes an interactive Tkinter visualizer for exploring how each algorithm works.
+A Python project for solving the classic 8-puzzle using both uninformed and informed search strategies. The repository is designed to demonstrate how different algorithms explore the puzzle state space and how heuristic guidance can improve efficiency.
 
-The 8-puzzle is a sliding-tile puzzle played on a 3x3 board. A player moves tiles into the empty space until the board reaches the goal state:
+## Overview
+
+The 8-puzzle is a sliding-tile puzzle played on a 3x3 board. The goal is to rearrange the tiles into the target configuration:
 
 ```text
 1 2 3
@@ -10,51 +12,56 @@ The 8-puzzle is a sliding-tile puzzle played on a 3x3 board. A player moves tile
 7 8 _
 ```
 
-## Features
+The project compares search methods that solve the puzzle from arbitrary starting states, making it a useful example for learning AI, graph search, and heuristic-based planning.
+
+## Included algorithms
 
 - Breadth-First Search (BFS)
 - Depth-First Search (DFS)
 - Iterative Deepening Depth-First Search (IDDFS)
-- A* Search using the Manhattan distance heuristic
-- A* Search using the Euclidean distance heuristic
-- Interactive Tkinter GUI for visualizing the puzzle and solution process
+- A* Search with the Manhattan distance heuristic
+- A* Search with the Euclidean distance heuristic
 
-## Why this project is useful
+## Visualizer
 
-This project demonstrates the differences between informed and uninformed search strategies on a classic state-space problem. It is useful for learning:
+The project includes an interactive Tkinter-based visualizer to make the search process easier to understand. It can help illustrate:
 
-- how search algorithms explore states
-- how heuristics improve performance
-- how pathfinding differs across algorithms
-- how a simple GUI can make search behavior easier to understand
+- how the search tree grows
+- how different algorithms prioritize states
+- how heuristics reduce the number of explored states
+- how a valid solution is reconstructed from the goal state
+
+## Why this project matters
+
+This repository is a practical example of classic search techniques in artificial intelligence. It is useful for:
+
+- learning how different algorithms behave on the same problem
+- comparing informed and uninformed search strategies
+- understanding the trade-offs between completeness, optimality, and efficiency
+- visualizing algorithmic reasoning in an intuitive puzzle setting
 
 ## Getting started
 
-1. Clone the repository:
+Clone the repository and run the main entry point from the project directory:
 
 ```bash
 git clone https://github.com/OmarSoudan/8Puzzle.git
 cd 8Puzzle
+python3 main.py
 ```
 
-2. Run the project with Python:
+If your environment uses `python` instead of `python3`, use:
 
 ```bash
 python main.py
 ```
 
-If your system uses Python 3 explicitly, use:
-
-```bash
-python3 main.py
-```
-
-> If the entry file in your local copy uses a different name, run the Python file that launches the visualizer.
+If the project entry point is named differently in your local copy, run the Python file that starts the visualizer or solver.
 
 ## Requirements
 
 - Python 3.8 or newer
-- Tkinter (included with most standard Python installations)
+- Tkinter (included with most standard Python distributions)
 
 ## License
 
